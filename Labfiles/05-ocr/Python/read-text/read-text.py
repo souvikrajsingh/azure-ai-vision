@@ -25,7 +25,7 @@ def main():
         )
 
         # Menu for text reading functions
-        print('\n1: Use Read API for image (Lincoln.jpg)\n2: Read handwriting (Note.jpg)\nAny other key to quit\n')
+        print('\n1: Use Read API for image (Lincoln.jpg)\n2: Read handwriting (Note.jpg)\n3: Difficult image (hapiness.jpg)\n4: more difficult (difficult.jpg)\nAny other key to quit\n')
         command = input('Enter a number:')
         if command == '1':
             image_file = os.path.join('images', 'Lincoln.jpg')
@@ -35,6 +35,9 @@ def main():
             GetTextRead(image_file)
         elif command == '3':
             image_file = os.path.join('images', 'happiness.jpg')
+            GetTextRead(image_file)
+        elif command == '4':
+            image_file = os.path.join('images', 'difficult.jpg')
             GetTextRead(image_file)
 
     except Exception as ex:
